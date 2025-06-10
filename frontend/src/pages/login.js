@@ -35,7 +35,7 @@ function Login() {
             //     },
             //     body: JSON.stringify(loginInfo)
             // });
-            const response = await fetch("http://localhost:8080/auth/login", {
+            const response = await fetch("https://auth-form-api.vercel.app/auth/login", {
                 method: "POST",
                 body: JSON.stringify(loginInfo),
                 headers: { "Content-Type": "application/json" }
