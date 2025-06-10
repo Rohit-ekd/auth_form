@@ -1,0 +1,120 @@
+
+*,
+::before,
+::after{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+label{
+  font-size: 20px;
+  margin-bottom:6px;
+  color:#333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+html,
+body{
+  height: 100%;
+  width: 100%;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.container{
+  background-color: #FFF;
+  padding: 32px 48px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+  transition: box-shadow 0.3s ease;
+}
+.container:hover {
+  box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.25);
+}
+
+.container > h1{
+  margin-bottom: 20px;
+  color: #6c2eb7;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  transition: color 0.2s;
+}
+
+.container > form{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+.container div{
+  display: flex;
+  flex-direction: column;
+}
+
+.container input{
+  width: 100%;
+  font-size: 1rem;
+  padding: 12px;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #bdbdbd;
+  background: #f7f7fa;
+  border-radius: 4px 4px 0 0;
+  transition: border-color 0.2s, background 0.2s;
+  margin-bottom: 4px;
+}
+
+.container input:focus {
+  border-bottom: 2.5px solid #6c2eb7;
+  background: #f0eaff;
+}
+.container input::placeholder{
+  font-size: 0.95rem;
+  font-style: italic;
+  color:#aaa;
+}
+
+button{
+  background: linear-gradient(90deg, #6c2eb7 0%, #8f6ed5 100%);
+  border: none;
+  font-size: 1.1rem;
+  color: white;
+  border-radius: 8px;
+  padding: 12px;
+  cursor: pointer;
+  margin: 12px 0 0 0;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(108, 46, 183, 0.08);
+  transition: background 0.2s, transform 0.15s;
+}
+
+button:hover, button:focus {
+  background: linear-gradient(90deg, #8f6ed5 0%, #6c2eb7 100%);
+  transform: translateY(-2px) scale(1.03);
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 18px 6vw;
+    max-width: 95vw;
+    border-radius: 10px;
+  }
+  .container > h1 {
+    font-size: 1.3rem;
+  }
+  button {
+    font-size: 1rem;
+    padding: 10px;
+  }
+}
